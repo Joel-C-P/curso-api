@@ -14,7 +14,7 @@ app.post("/team/pokemons", () => {
     res.status(200).send(' Post del goat')
 })
 
-app.get("/team", () => {
+app.get("/team", (req,res) => {
     res.status(200).send(' Get del goat')
 })
 
@@ -29,3 +29,5 @@ app.put("/team", () => {
 app.listen(port, () => {
     console.log("Server started at port 3000");
 }) 
+
+exports.app = app;
